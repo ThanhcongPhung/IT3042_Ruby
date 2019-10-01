@@ -58,13 +58,10 @@ class MicropostsController < ApplicationController
     end
   
     private
-      
       def set_micropost
         @micropost = Micropost.find(params[:id])
       end
-  
-      
-    end
       def micropost_params
         params.require(:micropost).permit(:content, :user_id)
       end
+end
